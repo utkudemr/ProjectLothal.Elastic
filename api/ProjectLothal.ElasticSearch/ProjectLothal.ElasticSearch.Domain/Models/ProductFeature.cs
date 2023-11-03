@@ -1,5 +1,7 @@
 ﻿
 
+using ProjectLothal.ElasticSearch.Domain.Enums;
+
 namespace ProjectLothal.ElasticSearch.Domain.Models;
 
 public class ProductFeature
