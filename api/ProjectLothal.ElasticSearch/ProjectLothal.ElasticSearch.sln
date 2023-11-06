@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectLothal.ElasticSearch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectLothal.ElasticSearch.Domain", "ProjectLothal.ElasticSearch.Domain\ProjectLothal.ElasticSearch.Domain.csproj", "{DA52FC60-8613-4C88-AFBA-8B3C6BD6C867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectLothal.Elastic.Persistance", "ProjectLothal.Elastic.Persistance\ProjectLothal.Elastic.Persistance.csproj", "{9C403966-820E-4385-9DAB-91E37C2A5FCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectLothal.Elastic.Persistance", "ProjectLothal.Elastic.Persistance\ProjectLothal.Elastic.Persistance.csproj", "{9C403966-820E-4385-9DAB-91E37C2A5FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectLothal.Elastic.Application", "ProjectLothal.Elastic.Application\ProjectLothal.Elastic.Application.csproj", "{74394C87-D311-47EB-B7D3-91A92A662780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectLothal.Elastic.Core", "ProjectLothal.Elastic.Core\ProjectLothal.Elastic.Core.csproj", "{BE173034-B1D5-4432-85DD-02E56B524046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{9C403966-820E-4385-9DAB-91E37C2A5FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C403966-820E-4385-9DAB-91E37C2A5FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C403966-820E-4385-9DAB-91E37C2A5FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74394C87-D311-47EB-B7D3-91A92A662780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74394C87-D311-47EB-B7D3-91A92A662780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74394C87-D311-47EB-B7D3-91A92A662780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74394C87-D311-47EB-B7D3-91A92A662780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE173034-B1D5-4432-85DD-02E56B524046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE173034-B1D5-4432-85DD-02E56B524046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE173034-B1D5-4432-85DD-02E56B524046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE173034-B1D5-4432-85DD-02E56B524046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

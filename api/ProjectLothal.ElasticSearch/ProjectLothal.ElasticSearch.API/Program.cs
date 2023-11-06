@@ -1,6 +1,6 @@
-using Elasticsearch.Net;
-using Nest;
 using ProjectLothal.ElasticSearch.API.Extensions;
+using ProjectLothal.Elastic.Application;
+using ProjectLothal.Elastic.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +10,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IApplicationBuilder, ApplicationBuilder>();
 builder.Services.AddElastic(builder.Configuration);
+builder.Services.AddApplicationServices();
+builder.Services.AddPersistanceServices();
+
+
+
 var app = builder.Build();
 
 
@@ -26,3 +31,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+

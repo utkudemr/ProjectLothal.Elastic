@@ -1,5 +1,7 @@
 ﻿using Elasticsearch.Net;
+using MassTransit;
 using Nest;
+using System.Reflection;
 
 namespace ProjectLothal.ElasticSearch.API.Extensions
 {
@@ -11,5 +13,10 @@ namespace ProjectLothal.ElasticSearch.API.Extensions
             var client = new ElasticClient(settings);
             services.AddSingleton(client);
         }
+
+      
     }
+
+
+  
 }
