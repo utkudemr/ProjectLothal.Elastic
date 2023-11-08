@@ -6,6 +6,7 @@ using ProjectLothal.Elastic.Application.Services;
 using ProjectLothal.Elastic.Core.Consumers;
 using ProjectLothal.Elastic.Core.Responses;
 using ProjectLothal.ElasticSearch.Domain.Models;
+using System.Net;
 
 namespace ProjectLothal.Elastic.Application.Features.Products.Index.Create;
 
@@ -43,10 +44,10 @@ public class CreateProductConsumer : MediatorRequestHandler<CreateProductStatus,
         var response = await _repository.IndexAsync(mappedProduct);
         if (response == null)
         {
-            return BaseResponse<CreateProductResponseDto>.ErrorResponse(false, "Kayıt esnasında hata");
+            return BaseResponse<CreateProductResponseDto>.ErrorResponse(false, "Kayıt esnasında hata", HttpStatusCode.InternalServerError);
         }
         var mappedResponse = _mapper.Map<Product, CreateProductResponseDto>(response);
         
-        return BaseResponse<CreateProductResponseDto>.SuccessResponse(mappedResponse, true);
+        return BaseResponse<CreateProductResponseDto>.SuccessResponse(mappedResponse, true,HttpStatusCode.Created);
     }
 }

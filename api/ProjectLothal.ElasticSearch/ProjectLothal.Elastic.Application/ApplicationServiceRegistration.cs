@@ -1,5 +1,6 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
+using Nest;
 using ProjectLothal.Elastic.Core.Consumers;
 using System.Reflection;
 
@@ -18,14 +19,17 @@ namespace ProjectLothal.Elastic.Application
         {
 
             var types = assembly.GetTypes().Where(mytype => mytype.GetInterfaces().Contains(type)).ToList();
-            foreach (var item in types)
+            services.AddMediator(x =>
             {
-                if (addWithLifeCycle == null)
+                foreach (var item in types)
+                {
+                    if (addWithLifeCycle == null)
+                        x.AddConsumers(item);
+                    else addWithLifeCycle(services, type);
 
-                    services.AddMediator(x => x.AddConsumersFromNamespaceContaining(item));
-                else addWithLifeCycle(services, type);
-
-            }
+                }
+            });
+            
             return services;
         }
     }
