@@ -1,7 +1,6 @@
 ﻿
 using AutoMapper;
 using MassTransit.Mediator;
-using ProjectLothal.Elastic.Application.Features.Products.Query.GetById;
 using ProjectLothal.Elastic.Application.Services;
 using ProjectLothal.Elastic.Core.Consumers;
 using ProjectLothal.Elastic.Core.Responses;

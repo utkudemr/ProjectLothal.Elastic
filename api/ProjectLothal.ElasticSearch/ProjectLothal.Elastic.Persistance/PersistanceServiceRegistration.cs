@@ -12,6 +12,7 @@ public static class PersistenceServiceRegistration
     public static IServiceCollection AddPersistanceServices(this IServiceCollection services)
     {
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IECommerceRepository, ECommerceRepository>();
         return services;
     }
 }
