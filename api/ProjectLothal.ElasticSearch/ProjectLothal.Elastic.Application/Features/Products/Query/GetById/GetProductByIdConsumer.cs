@@ -12,7 +12,7 @@ namespace ProjectLothal.Elastic.Application.Features.Products.Query.GetById
 
     public record GetProductByIdStatus : Request<BaseResponse<GetByIdProductDto>>
     {
-        public string ProductId { get; set; }
+        public required string ProductId { get; set; }
     }
     public class GetProductByIdConsumer : MediatorRequestHandler<GetProductByIdStatus, BaseResponse<GetByIdProductDto>>, Consumers
     {

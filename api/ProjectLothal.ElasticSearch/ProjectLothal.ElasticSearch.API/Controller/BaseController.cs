@@ -11,7 +11,7 @@ namespace ProjectLothal.ElasticSearch.API.Controller
     [ApiController]
     public class BaseController:ControllerBase
     {
-        private IMediator? _mediator;
+        private readonly IMediator? _mediator;
         protected IMediator? Mediator => _mediator ?? HttpContext.RequestServices.GetService<IMediator>();
 
         [NonAction]
